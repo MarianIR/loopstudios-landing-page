@@ -1,0 +1,127 @@
+.hero {
+  width: 100%;
+  padding: 3rem 2rem;
+  background-image: url("../mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  @media (min-width: 768px) {
+    background-image: url("../desktop/image-hero.jpg");
+    padding: 3rem 10rem;
+  }
+  @media (min-width: 1070px) {
+    padding: 3rem 15rem;
+  }
+  .page-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    @media (min-width: 1070px) {
+    }
+    .logo {
+      width: 15rem;
+      height: 3rem;
+      z-index: 3 !important;
+    }
+    .navigation {
+      display: block;
+      z-index: 2 !important;
+      .nav-menu-button {
+        @media (min-width: 1070px) {
+          display: none;
+        }
+        .open-menu-btn {
+        }
+        .close-menu-btn {
+          display: none;
+        }
+        @media (min-width: 1070px) {
+        }
+      }
+      .nav-list {
+        // display: none;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto 0 auto;
+        text-align: left;
+        padding: 25rem 2rem 2rem 2rem;
+        background-color: $primaryColor2;
+        height: 105vh;
+        line-height: 2;
+        z-index: 0;
+        display: flex;
+        top: -1rem;
+        z-index: -1 !important;
+        flex-direction: column;
+        animation: slideInFromLeft 1s ease-in-out;
+        @media (min-width: 768px) {
+          padding: 25rem 2rem 2rem 10rem;
+        }
+        @media (min-width: 1070px) {
+          display: flex;
+          flex-direction: row;
+          position: relative;
+          background-color: transparent;
+          padding: 0;
+          height: auto;
+          animation: none;
+        }
+        .list-element {
+          list-style: none;
+          @media (min-width: 1070px) {
+          }
+          .list-link {
+            color: $primaryColor1;
+            text-decoration: none;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            @media (min-width: 1070px) {
+              position: relative;
+              text-transform: capitalize;
+              padding: 0 2rem;
+              &:hover {
+                &::after {
+                  content: "";
+                  position: absolute;
+                  display: block;
+                  margin: 0 auto;
+                  bottom: -3rem;
+                  left: 0;
+                  right: 0;
+                  width: 50%; /* Adjust the width as needed */
+                  height: 0.3rem; /* Set the desired thickness */
+                  background-color: $primaryColor1; /* Set the desired color */
+                  transition: all 1s ease-in-out;
+                }
+              }
+            }
+          }
+        }
+        @keyframes slideInFromLeft {
+          from {
+            transform: translateX(-100%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+
+  .hero-heading {
+    padding: 1rem;
+    margin: 10rem 0;
+    color: $primaryColor1;
+    text-transform: uppercase;
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 1.5;
+    letter-spacing: 0.2rem;
+    border: 0.2rem solid $primaryColor1;
+    max-width: 55rem;
+  }
+}

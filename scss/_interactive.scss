@@ -1,0 +1,64 @@
+.interactive-vr {
+  width: 100%;
+  padding: 10rem 2rem 5rem;
+  @media (min-width: 768px) {
+    padding: 10rem 10rem 5rem;
+  }
+  @media (min-width: 1070px) {
+    padding: 10rem 15rem 5rem;
+  }
+  @media (min-width: 1360px) {
+    display: flex;
+    align-items: flex-end;
+  }
+  .interactive-illustration {
+    display: block;
+    width: 100%;
+    // max-width: 90rem;
+    height: auto;
+    margin: 0 auto;
+    @media (min-width: 1360px) {
+      max-width: 60%;
+      margin: 0;
+    }
+  }
+  .interactive-article {
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    @media (min-width: 1360px) {
+      position: absolute;
+      margin-left: 35vw;
+      max-width: 50%;
+      z-index: 1 !important;
+      display: flex;
+      flex-direction: column;
+      padding-left: 5rem;
+      text-align: left;
+      // border: 0.1rem solid red;
+      background-color: $primaryColor1;
+    }
+
+    .interactive-heading {
+      text-transform: uppercase;
+      font-size: clamp(2.5rem, 4vw, 5rem);
+      letter-spacing: 0.2rem;
+      line-height: 1.5;
+      padding: 2rem 0 1rem 0;
+      color: $primaryColor2;
+      @media (min-width: 1366px) {
+        max-width: 50rem;
+      }
+    }
+    .paragraph {
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: 0.1rem;
+      color: $primaryColor3;
+      @media (min-width: 1360px) {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+      }
+    }
+  }
+}
